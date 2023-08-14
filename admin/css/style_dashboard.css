@@ -1,0 +1,320 @@
+
+body {font-family: "Lato", sans-serif;}
+
+.sidebar {
+  height: 100%;
+  width: 160px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #183048 ;
+  overflow-x: hidden;
+  padding-top: 16px;
+}
+#mySidenav  {
+    position: fixed;
+  left: -58px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+}
+#mySidenav:hover {
+left: 0;
+}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+.popover{  /*se le declara fixed para que se muestre sobre el menu*/
+  position:fixed!important;
+  color:#000000!important;
+
+}
+
+ul.nav.navbar-nav.navbar-right { /*se mueve el ul para la derecha*/
+    margin-right: -400px;
+}
+a.nav-item.nav-link {  /*se deaplaza el link salir para que se vea a un lado del nombre*/
+    margin-top: -45px;
+    margin-left: 138px;
+}
+
+a.navbar-brand { /*se mueve el logo */
+  margin-right: 247px!important;
+
+      margin-left: -442px!important;
+  }
+
+li { /*se alinia el boton con el link para que ambos se puedan manipular*/
+    margin-right: 65px;
+}
+
+.card{ /*posicion de los card*/
+  margin-left: 177px!important;
+}
+
+
+
+p#resultado { /*se genera nuevo estilo para la letra*/
+  margin-top: -54px;
+      margin-right: 8px;
+      margin-left: 83px!important;
+      font-size: 35px;
+      color: coral;
+}
+
+
+i#t_user {  /*se modifica el icono para que se vea mas grande*/
+    font-size: 55px;
+}
+.mb-3, .my-3 {  /*no haga espacio*/
+    margin-bottom: 0rem!important;
+}
+
+i.bi.bi-file-earmark-x { /*icono de excel se modifica*/
+    margin-left: 3px;
+}
+i.bi.bi-speedometer { /*se modifica el icono de dashboard*/
+    margin-left: 3px;
+}
+i.bi.bi-info-circle-fill {/*se modifica el icono de dashboard*/
+    margin-left: 5px!important;
+}
+i.bi.bi-info-circle { /*se modifica el icono de dashboard*/
+    margin-left: 4px;
+}
+
+
+
+/*Notificaciones de tickets*/
+
+  div.notif {
+  position: absolute;
+  top: 8px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background: #343436;
+  line-height: 31px;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.trans {
+  background: #f1c40f !important;         box-shadow: 0px 0px 10px #f1c40f;
+}
+
+div.notif.green {
+    width: 10px;
+    height: 10px;
+    color: transparent;
+    right: 5px;
+    transition: all 0.2s ease;
+}
+
+div.notif.trans  {  /*Acomodas el punto de inicio de la notificacion*/
+  width: 10px;
+      height: 10px ;
+      color: transparent;
+      left: 69px;
+      top: 69px;
+      transition: all 0.2s ease;
+}
+div:hover div.notif.trans { /*Al pasar el mouse se modifica el tamaño*/
+   width: 30px;
+   height: 30px;
+   right: 4px;
+   top: 60px;
+   color: #fff;
+   box-shadow: 0px 0px 60px #e74c3c;
+   left: 60px;
+}
+
+div.notif {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    color: #fff;
+    box-shadow: 0px 0px 10px transparent;
+    top: 8px;
+}
+
+
+/*Notificaciones de tickets proceso*/
+
+  div.notif3 {
+  position: absolute;
+  top: 8px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+
+  background: #343436;
+  line-height: 31px;
+  border-radius: 100%;
+  color: #25e9e0;
+}
+
+.trans3 {
+  background: #25e9e0 !important;         box-shadow: 0px 0px 10px #f1c40f;
+}
+
+
+div.notif3.trans3  {  /*Acomodas el punto de inicio de la notificacion*/
+      width: 10px;
+      height: 10px ;
+      color: transparent;
+      left: 69px;
+      display: inline-block;
+      top: 69px;
+      transition: all 0.2s ease;
+}
+div:hover div.notif3.trans3 { /*Al pasar el mouse se modifica el tamaño*/
+   width: 30px;
+   height: 30px;
+   right: 4px;
+   top: 60px;
+   color: #fff;
+   box-shadow: 0px 0px 60px #e74c3c;
+   left: 60px;
+}
+
+div.notif3 {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    color: #25e9e0;
+    box-shadow: 0px 0px 10px transparent;
+    top: 8px;
+}
+
+/*Notificaciones de campana */
+
+  div.notif2 {
+  /*position: absolute;*/
+  top: 8px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+
+  background: #343436;
+  line-height: 31px;
+  border-radius: 100%;
+  color: #fff;
+}
+
+.trans2 {
+  background: #f1c40f !important;         box-shadow: 0px 0px 10px #f1c40f;
+}
+
+
+
+div.notif2.trans2  {  /*Acomodas el punto de inicio de la notificacion*/
+  width: 10px;
+      height: 10px ;
+      color: transparent;
+      left: 296px;
+          top: 14px!important;
+          display: inline-block!important;
+      transition: all 0.2s ease;
+}
+div:hover div.notif2.trans2 { /*Al pasar el mouse se modifica el tamaño*/
+  width: 30px;
+      height: 30px;
+      right: 15px!important;
+      top: 60px;
+      color: #fff;
+      box-shadow: 0px 0px 60px #e74c3c;
+      left: 260px;
+}
+
+div.notif2 {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    color: #fff;
+    box-shadow: 0px 0px 10px transparent;
+    top: 8px;
+}
+
+
+/*Notificaciones de campana en proceso */
+
+  div.notif4 {
+  /*position: absolute;*/
+  top: 8px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+
+  background: #343436;
+  line-height: 31px;
+  border-radius: 100%;
+  color: #25e9e0;
+}
+
+.trans4 {
+  background: #25e9e0 !important;         box-shadow: 0px 0px 10px #f1c40f;
+}
+
+
+
+div.notif4.trans4  {  /*Acomodas el punto de inicio de la notificacion*/
+  width: 10px;
+      height: 10px ;
+      color: transparent;
+      left: 307px;
+      top: 14px!important;
+  display: inline-block;
+      transition: all 0.2s ease;
+}
+div:hover div.notif4.trans4 { /*Al pasar el mouse se modifica el tamaño*/
+  width: 30px;
+      height: 30px;
+      right: 15px!important;
+      top: 60px;
+      color: #fff;
+      box-shadow: 0px 0px 60px #e74c3c;
+      left: 313px;
+}
+
+div.notif4 {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    color: #25e9e0;
+    box-shadow: 0px 0px 10px transparent;
+    top: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}

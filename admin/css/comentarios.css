@@ -1,0 +1,56 @@
+
+input#c_ticket{
+  border-radius: 22px!important;
+    max-width: 105px;
+    text-align: center;
+    border-color: currentColor;
+    display: inline-flex;
+}
+input#c_nombre{
+  border-radius: 22px!important;
+  margin-block: auto;
+  text-align: center;
+  border-color: currentColor;
+display: inline-flex;
+}
+
+i#lis {
+  color: black;
+
+      border-block-color: #ffe200d4;
+}
+
+img { /*Las imagenes que trae el servidor debe de mostrarlas en pocos pixeles */
+    width: 734px!important;
+      display: inline-flex;
+}
+
+.card-header {
+    display: inline-flex;
+}
+.datos_reporte { /*color de linea del ticket*/
+    border-bottom: groove !important;
+    border-color: violet !important;
+}
+.datos_reporte2 {/*Cambio de color de la linea del comentario*/
+    border-bottom: groove !important;
+    border-color: #18cde1 !important;
+}
+
+.texto_comentario {
+  width: 1157px;
+  margin-left: 25px;
+  font-size: 16px;
+}
+
+a.btn.btn-info.collapsed {
+    margin-left: 8px!important;
+}
+.container {
+    margin-left: 104px;
+}
+
+
+button.btn.btn-primary#save {
+    margin-left: 377px;
+}

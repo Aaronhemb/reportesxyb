@@ -1,0 +1,86 @@
+/*estatus activo*/
+div#status:hover {
+
+    box-shadow: 0px 0px 20px #14ee17!important;
+}
+div#status {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #1bf330!important;
+  border-color: #15f619!important;
+  border-radius: 737px;
+}
+
+/*estatus pause*/
+div#status2:hover {
+
+  box-shadow: 0px 0px 20px #efbd0b;
+}
+div#status2 {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #f5b520!important;
+    border-color: #f0c118!important;
+border-radius: 737px;
+}
+/*estatus revision*/
+div#status3:hover {
+
+  box-shadow: 0px 0px 20px #e7f43e;
+}
+div#status3 {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #eff54e!important;
+border-color: #f4ed36!important;
+border-radius: 737px;
+}
+/*estatus cancelado*/
+div#status4:hover {
+
+  box-shadow: 0px 0px 20px #2e0707;
+}
+div#status4 {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #4f0f0f!important;
+  border-color: #500f0f!important;
+border-radius: 737px;
+}
+/*estatus Actividades por iniciar*/
+div#status5:hover {
+
+  box-shadow: 0px 0px 20px #b319e2;
+}
+div#status5 {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #b319e2!important;
+  border-color: #b319e2!important;
+border-radius: 737px;
+}
+
+/*estatus Finalizado*/
+div#status6:hover {
+
+  box-shadow: 0px 0px 20px #f41b1b;
+}
+div#status6 {
+  margin-left: 16px !important;
+  margin-top: 3px!important;
+  width: 28px!important;
+  height: 28px!important;
+  background-color: #fa271b!important;
+  border-color: #d31a13!important;
+border-radius: 737px;
+}

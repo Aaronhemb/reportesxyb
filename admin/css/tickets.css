@@ -1,0 +1,76 @@
+table#table_tickets {
+  margin-left: 172px!important;
+  margin-top: 155px!important;
+  width: 70%!important;
+}
+
+div#i_ticket {
+  margin-left: 11px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+div#titulo {
+  margin-left: 76px;
+  margin-top: -66px;
+  margin-bottom: -5px;
+  max-width: 524px;
+}
+
+div#nombre {
+  margin-left: 76px;
+margin-top: 14px;
+}
+div#sede {
+  margin-left: 74px;
+  margin-top: 9px;
+  margin-bottom: 14px;
+}
+div#status {
+  margin-left: 719px!important;
+      margin-top: -75px!important;
+      margin-bottom: 27px;
+}
+div#fecha {
+  margin-left: 721px;
+  margin-top: -1px;
+  margin-bottom: 10px;
+}
+
+div#tabla_ticket_wrapper {
+    margin-top: -126px!important;
+}
+div#tabla_ticket_wrapper {
+  margin-top: -60px!important;
+  padding-top: 62px!important;
+
+}
+
+
+
+
+
+label {
+    /*display: none!important;*/
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+  /*  margin-right: 350px!important;  */
+}
+
+label#context {
+    display: inline-flex!important;
+}
+
+input.form-control.form-control-sm {
+    margin-right: 376px!important;
+}
+
+div#tabla_ticket_filter {
+    margin-right: 338px!important;
+}
+
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
