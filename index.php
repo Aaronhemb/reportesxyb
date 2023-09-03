@@ -1,83 +1,106 @@
-<?php
-	session_start();
-	include_once 'login/dbconnect.php';
-?>
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Inicio | Panel de Control</title>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport" >
-	<link rel="stylesheet" href="login/css/style.css">
-	<link rel="stylesheet" href="login/css/bootstrap.min.css" type="text/css" />
+<?php include ("head.php"); ?>
 
-</head>
-<body id="inicio"   bgcolor="FFCECB" style="
 
-background: url(login/image/2.jpg) no-repeat center center fixed;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
-background: none; 
-" >
-
-<nav class="navbar navbar-default" role="navigation">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar1">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="index.php" style="font-family: 'Lobster', cursive;"><!--<img src="login/image/logo-HA.png" alt="HA" width="110px"  >--></a>
+		<div class="main">
+		  <h2>DASHBOARD</h2>
 		</div>
-		<div class="collapse navbar-collapse" id="navbar1">
-			<ul class="nav navbar-nav navbar-right">
-				<?php if (isset($_SESSION['usr_id'])) { ?>
-				<li><p class="navbar-text">Logeado como <i class="btn btn-danger btn-xs" ><b><?php echo $_SESSION['usr_name']; ?></b></i></p></li>
-				<li><a href="login/logout.php">Log Out</a></li>
-				<?php } else { ?>
-				<li><a href="login/login.php">Login</a></li>
-				<li><a href="login/register.php">Registro</a></li>
-				<?php } ?>
-			</ul>
-		</div>
-	</div>
-</nav>
+		<?php
+		$con = new mysqli('localhost','root','1234','control2');
+		$query = $con->query("SELECT COUNT(roll) FROM usuarios WHERE roll = 1");
+		foreach($query as $data){$roll[] = $data['COUNT(roll)'];	}
+		
+		$query2 = $con->query("SELECT COUNT(roll) FROM usuarios WHERE roll = 2");
+		foreach($query2 as $data2){$roll2[] = $data2['COUNT(roll)'];	}
+
+		$query5 = $con->query("SELECT COUNT(roll) FROM usuarios WHERE roll = 3");
+		foreach($query5 as $data5){$roll5[] = $data5['COUNT(roll)'];	}
+
+		$query3 = $con->query("SELECT COUNT(sede) FROM departamento ");
+		foreach($query3 as $data3){$sede = $data3['COUNT(sede)'];	}
+
+		$query4 = $con->query("SELECT COUNT(id_ticket) FROM tickets ");
+		foreach($query4 as $data4){$ticket = $data4['COUNT(id_ticket)'];	}
+
+		$query6 = $con->query("SELECT COUNT(id) FROM proveedor ");
+		foreach($query6 as $data6){$proveedor = $data6['COUNT(id)'];	}
+
+		$con->close();
+			?>
+
+			<br><br>
+
+		<div class="dashboard-cards">
+        <!-- Agrega tus cuadros de información aquí -->
+        <!-- C_USER Card -->
+        <div class="card">
+            <!-- Contenido de la card -->
+			<h5 class="card-title"> TOTAL DE USUARIOS</h5>
+					<i id="t_user" class="fa fa-fw fa-user"></i> <p id="resultado"  style="margin-left: 83px!important;"  class="card-text"> <?php echo  $roll['0']; ?></p>
+        </div>
+        <!-- C_ADM Card -->
+        <div class="card">
+            <!-- Contenido de la card -->
+				<h5 class="card-title"> TOTAL DE ADMINISTRADOR</h5>
+				<i id="t_user" class="fa fa-user-secret"></i> <p id="resultado" style="margin-left: 83px!important;"  class="card-text"> <?php echo  $roll2['0']; ?></p>
+        </div>
+		        <!-- C_ADM Card -->
+				<div class="card">
+            <!-- Contenido de la card -->
+				<h5 class="card-title"> TOTAL DE INGENIEROS</h5>
+				<i id="t_user" class="fa fa-user-plus"></i> <p id="resultado" style="margin-left: 83px!important;"  class="card-text"> <?php echo  $roll5['0']; ?></p>
+        </div>
+
+        <!-- C_DEPA Card -->
+        <div class="card">
+            <!-- Contenido de la card -->
+			<h5 class="card-title"> TOTAL DE DEPARTAMENTOS</h5>
+			<i id="t_user" class="fa fa-home"></i> <p id="resultado" style="margin-left: 83px!important;"  class="card-text"> <?php echo  $sede; ?></p>
+			
+        </div>
+
+        <!-- C_TICK Card -->
+        <div class="card">
+            <!-- Contenido de la card -->
+			<h5 class="card-title"> TOTAL DE TICKETS</h5>
+			<i id="t_user" class="fa fa-fw fa-ticket"></i> <p id="resultado"  style="margin-left: 83px!important;"  class="card-text"> <?php echo  $ticket; ?></p>
+        </div>
+
+        <!-- C_TICK Card -->
+        <div class="card">
+            <!-- Contenido de la card -->
+			<h5 class="card-title"> TOTAL DE PROVEEDORES</h5>
+			<i id="t_user" class="fa fa-users"></i> <p id="resultado"  style="margin-left: 83px!important;"  class="card-text"> <?php echo  $proveedor; ?></p>
+        </div>
+
+        <div style="clear: both;"></div>
+
+
+
+<div id="graph">
+
+<?php include ("graficas/grafica2.php"); ?>
+
+</div>
 
 
 
 
-<div class="container">
-
-      <!--Componente principal de un mensaje de primario o llamado a la acción
-      <div class="jumbotron">
-         <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs »</a>
-        </p>
-      </div>  -->
-			<br><br><br>
-			<h1 class="titulo" >control diario</h1>
-
-  </div>
-  <br><br><br>
-  <br><br><br>
-  <div class="cierre">
-    <footer >
-      <center>
-        <h4 class="h4">Creadores</h4>
-        <p class="p">© 2018 AHcompany - Todos los derechos reservados.</p>
-        <center>
-    </footer>
-  </div>
 
 
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
+
+
+  </body>
+
+  <script>
+  // Función para recargar la página cada 5 minutos (300,000 milisegundos)
+  function refreshPage() {
+    location.reload();
+  }
+
+  // Llama a la función refreshPage() cada 5 minutos
+  setInterval(refreshPage, 300000); // 300000 milisegundos = 5 minutos
+</script>
+
+
 </html>
